@@ -1,5 +1,8 @@
 (function () {
-  var activeLinks = document.querySelectorAll('.srg h3 a');
+  var activeLinks = Array.prototype.filter.call(document.querySelectorAll('.srg h3 a'), function (el) {
+    return el;
+  });
+
   if (activeLinks.length === 0) {
     return;
   }
@@ -16,13 +19,13 @@
   }
 
   function removeStylesFromActiveLinks() {
-    Array.prototype.forEach.call(activeLinks, function (activeLink) {
+    activeLinks.forEach(function (activeLink) {
       activeLink.style.cssText = activeLink.style.cssText.replace(activeStyles, '');
     });
   }
 
   function goToResult(direction) {
-    var indexOfActiveLink = Array.prototype.indexOf.call(activeLinks, document.activeElement);
+    var indexOfActiveLink = activeLinks.indexOf(document.activeElement);
     var previousIndex = indexOfActiveLink - 1 < 0 ? activeLinks.length - 1 : indexOfActiveLink - 1;
     var nextIndex = indexOfActiveLink + 1 > activeLinks.length - 1 ? 0 : indexOfActiveLink + 1;
     var indexToGoTo = direction === 'next' ? nextIndex : previousIndex;
