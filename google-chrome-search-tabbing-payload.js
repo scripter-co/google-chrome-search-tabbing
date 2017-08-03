@@ -11,7 +11,7 @@
     38: 'previous', // down
     9: 'next',      // tab
     40: 'next'      // up
-  }
+  };
   var activeStyles = 'font-weight: bold;';
 
   function addStylesToActiveLinks() {
