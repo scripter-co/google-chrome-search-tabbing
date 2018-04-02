@@ -1,6 +1,6 @@
 {
   "name": "Google Chrome Search Tabbing",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "manifest_version": 2,
   "description": "Allows you to TAB, arrow down & up through the results.",
   "homepage_url": "https://www.github.com/scripter-co/google-chrome-search-tabbing",
