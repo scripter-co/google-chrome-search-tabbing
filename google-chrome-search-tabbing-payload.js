@@ -1,5 +1,5 @@
 (function () {
-  var activeLinks = Array.prototype.filter.call(document.querySelectorAll('.srg h3 a, ._NId h3 a'), function (el) {
+  var activeLinks = Array.prototype.filter.call(document.querySelectorAll('h3.r a'), function (el) {
     return el;
   });
 
